@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  node:
+    image: dag  # Nome da imagem que você construiu
+    ports:
+      - "3001-3100:3001"  # Mapeia as portas externas para internas
+    environment:
+      - PEERS=ws://node:6001  # Marcar como dinâmica (o código já faz a descoberta)
+    networks:
+      - dag
+    deploy:
+      replicas: 100  # Número de réplicas
+      update_config:
+        parallelism: 1
+        delay: 5s
+      resources:
+        limits:
+          cpus: "1.0"    # Limita o container a usar até 1 CPU
+        reservations:
+          cpus: "0.5"    # Reserva pelo menos 0.5 CPU para o container
+    restart: always
+
+networks:
+  dag:
+    driver: overlay

@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  dag:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        - NO_CACHE=true  # Isso pode ser lido no Dockerfile para evitar uso de cache
+    image: dag:latest

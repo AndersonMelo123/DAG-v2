@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="shortcut icon" href="imag.png">
+		<title>Blockchain</title>
+		
+		<!-- JQuery -->
+		<script src="js/jquery-2.2.1.js"></script>
+
+		<!-- bootstrap - link cdn -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	
+		<!-- incluindo css -->
+		<!-- <link href="style.css" rel="stylesheet"> -->
+
+		<style type="text/css">
+			.div {
+			  border-width: medium;
+			  border-style: solid;
+			  width: 630px;
+			  border-color: #c6dcfe;
+			  background-color: #c6dcfe;
+			  margin-left: 11%;
+			  border-radius:12px;
+
+			}
+				
+			.dive {
+			  margin-left: 15px;
+			}
+
+			h4{
+				margin-left: 15px;
+				text-align: center;
+			}
+
+			h3{
+				margin-left: 15px;
+			}
+
+			.barra-superior {
+				padding-top: 10px;
+				padding-bottom: 10px;
+			}
+
+			.seta-4 {
+				border-top: 43px solid #c6dcfe;
+				border-left: 40px solid transparent;
+				border-right: 40px solid transparent;
+				margin: 0 274px; 
+				float: left;
+
+			}
+
+			.body-index{
+				background: #dcdcdc;
+			}
+
+			a {
+				color: #fff;
+			}
+		</style>
+
+		<script type="text/javascript" src="vivagraph.js"></script>
+		<script type="text/javascript">
+			function main () {
+				var graph = Viva.Graph.graph();
+
+				graph.addLink(1, 2);
+
+				var renderer = Viva.Graph.View.renderer(graph);
+				renderer.run();
+			}
+		</script>
+
+		<style type="text/css" media="screen">
+			html, body, svg { width: 100%; height: 100%;}
+		</style>
+	</head>
+
+	<body class="body-index">
+
+		<!-- <div class="container-fluid  conteudo"> -->
+			<!-- <div class="row-fluid"> -->
+				<!-- <div class="col-md-12 column"> -->
+					<div class="col-md-8 col-md-offset-2 column panel">
+
+						<nav class="navbar navbar-default navbar-static-top">
+							<div class="container">
+								<form class="form-inline barra-superior">
+									<!--<div class="form-group">
+										<button type="button" class="btn btn-info pull-right"><a href="http://localhost/home">Back</a></button>
+									</div>-->
+									
+									<div class="form-group">				
+										<h3>DAG</h3>
+									</div>
+								</form>
+							</div>
+							
+						</nav>
+
+							<br/>
+
+							<% for(var i=0; i<result.length; i++){ %>
+								
+								<div class="div">
+									<h4><b>Bloco <%= result[i].id %></b></h4>
+									<p class="dive">
+										<br/>
+										Previous Hash : <% for (var x=0; x<2; x++) { %>
+															<%= result[i].previousHash[x] %>
+														<% } %>
+										<br/>
+										Nonce : <%= result[i].nonce %>
+										<br/>
+										Recorded on : 
+										<% 
+										var d = result[i].timestamp;
+										var months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+										//var data = d.getDate() +' de '+ months[d.getMonth()] +' de '+ d.getFullYear()+' às '+ d.getHours()+':'+d.getMinutes()+':'+d.getSeconds()%>
+										
+										<%= d
+										 %>
+										<br/>
+										Block Hash : <%= result[i].hash%>			
+										<br/>
+										Data : <%= JSON.stringify(result[i].data)%>
+									</p>
+									<div class="seta-4"></div>
+
+								</div>
+								
+								<br/>
+								<br/>
+
+							<% } %>
+					</div>
+					
+				<!-- </div>	     -->
+			<!-- </div>	 -->
+		<!-- </div>			     -->
+		
+	</body>
+</html>

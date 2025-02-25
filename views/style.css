@@ -1,0 +1,192 @@
+.body-index{
+	background: #ffffff;
+}
+
+.body-jogo{
+	background: #dcdcdc;
+	background-position: center;
+}
+
+.user {
+	text-align: right;
+}
+
+.form-entrar {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.login {
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.form-cadastro {
+	color: #000000;
+}
+
+.form-cadastro img{
+	margin: 0 auto;
+}
+
+.sair {
+	padding-top: 10px;
+}
+
+.barra-superior {
+	background-color: #fff;
+	padding:15px;
+	opacity: 0.9;
+  filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+.barra-superior {
+	text-align:left;
+}
+
+.barra-superior span{
+	display: block;
+	width: 100%;
+	font-weight: bold;
+}
+
+.barra-inferior {
+    position: absolute;
+    bottom: 0;
+	  width:100%;
+    height: auto;
+	  padding:15px;
+    background-color: #fff;
+	  opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+}
+
+.barra-inferior span{
+	display: block;
+	width: 100%;
+	font-weight: bold;
+}
+
+.acoes{
+	background-color: #fff;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+	padding:15px;
+}
+
+.acoes span{
+	color: #333333;
+}
+
+#pergaminhos{
+	max-height: 280px;
+	overflow: auto;
+}
+
+.casa span{
+	margin-top:-20px;
+	margin-left:10px;
+	display: block;
+	font-weight: bold;
+	color:#fff;
+	font-size: 15px;
+}
+
+.validar{
+	background-color: #fff;
+	opacity: 0.9;
+    filter: alpha(opacity=90); /* For IE8 and earlier */
+	padding:15px;
+}
+
+.validar span{
+	color: #333333;
+}
+
+.validacao{
+	padding-top: 15px;
+	padding-left: 15px;
+}
+
+.botao{
+	float: right;
+}
+
+.arearesult{
+	padding-bottom: 260px;
+	border: 10px;
+	border-color: #000;
+}
+
+.lista {
+	text-align: right;
+	opacity: 0.9;
+	color: #000;
+}
+
+h4{
+	margin-left: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 6px;
+}
+
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 6px;
+    text-align: center;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+
+}
+
+.button {
+  background-color: #696969	;
+  border: none;
+  color: white;
+  padding: 6px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.button2 {
+  background-color: #696969	;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.dive {
+  border-width: medium;
+  border-style: solid;
+  border-color: #000;
+  background-color: #fff;
+  border-radius:10px;
+}
